@@ -6,9 +6,10 @@ class Point:
 	# MODIFIED BY ME
 	def __repr__(self):
 		return f"({self.x}, {self.y})"
-	
 	def __str__(self):
 		return self.__repr__()
+	def get_iter(self, size):
+		return int(size*self.y + self.x)
 
 class line:
 	def __init__(self, p1, p2):
