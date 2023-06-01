@@ -21,7 +21,7 @@ The following rules must be satisfied:
 
 A solved board for this puzzle is available below:
 
-![Solved KenKen](solved-kenken.png)
+![Solved KenKen](kenken_solved.png)
 
 ## Usage
 To run the program, clone this repository and open it in a code editor. You need to create a virtual environment by running the following:
@@ -64,7 +64,7 @@ This file walks you through each step involved in solving the puzzle, with displ
 
 ## How It Works
 
-As mentioned above, each step in this process is visible in `walkthrough.ipynb` [here](https://github.com/vivaansinghvi07/blob/main/walkthrough.ipynb).
+As mentioned above, each step in this process is visible in `walkthrough.ipynb` [here](https://github.com/vivaansinghvi07/kenken-solver/blob/main/walkthrough.ipynb).
 
 To process the image, the program first determines where the board is on the image, and assumes that the board takes up the largest area on the page. It then crops the image to perfectly fit the board.
 
