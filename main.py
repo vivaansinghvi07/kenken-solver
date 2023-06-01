@@ -602,6 +602,7 @@ def main():
         ('2', '5')
     ]
     SKIP_VERIFICATION = any([opt in sys.argv for opt in ["--skip-verification", "-s"]])
+    NEW_FILE = any([opt in sys.argv for opt in ["--new-file", "-n"]])
     FILENAME = sys.argv[1]
     IMAGES = get_board_images(FILENAME)
 
@@ -619,9 +620,14 @@ def main():
     
     with Spinner(message="Solving board "):
         solved_board = determine_solution(operations, GAME_SIZE)
-        
+
     if solved_board is not None:
-        board_to_image(solved_board, IMAGES["original"], IMAGES["crop_dimensions"], BOX_SIZE, GAME_SIZE, FILENAME)
+        if NEW_FILE:
+            split_filename = FILENAME.split(".")
+            outfile = f"{'.'.join(split_filename[:-1])}_solved.{split_filename[-1]}"
+        else:
+            outfile = FILENAME
+        board_to_image(solved_board, IMAGES["original"], IMAGES["crop_dimensions"], BOX_SIZE, GAME_SIZE, outfile)
 
 if __name__ == "__main__":
     main()
