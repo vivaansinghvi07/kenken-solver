@@ -74,7 +74,6 @@ After the image is processed, each relationship is analyzed to create the board,
 
 Then, the board is written onto the original image and the image is saved.
 
-
 ## Contributing
 
 For finding bugs in the code, optimizing the algorithm, or more, pull requests are more than welcome.
