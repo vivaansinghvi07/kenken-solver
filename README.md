@@ -73,3 +73,12 @@ Then, it blurs the image in order to seperate thicker lines from the thinner one
 After the image is processed, each relationship is analyzed to create the board, from which the program uses a simple backtracking approach to solve the puzzle.
 
 Then, the board is written onto the original image and the image is saved.
+
+
+## Contributing
+
+For finding bugs in the code, optimizing the algorithm, or more, pull requests are more than welcome.
+
+## License
+
+This software is released under the MIT License.
